@@ -8,20 +8,33 @@ Design can be simulated on https://www.edaplayground.com/x/tvqx.
 
 The instruction set for the machine is:
 
+
 Instruction    Instruction  Instruction
                Machine Code Address/Data
                
+               
 Load ACC kk     0000XXXX    KKKKKKKK
+
 Add ACC kk      0100XXXX    KKKKKKKK
+
 And ACC kk      0001XXXX    KKKKKKKK
+
 Sub ACC kk      0110XXXX    KKKKKKKK
+
 Input ACC pp    1010XXXX    PPPPPPPP
+
 Output ACC pp   1110XXXX    PPPPPPPP
+
 Jump U aa       1000XXXX    AAAAAAAA
+
 Jump Z aa       100100XX    AAAAAAAA
+
 Jump C aa       100110XX    AAAAAAAA
+
 Jump NZ aa      100101XX    AAAAAAAA
+
 Jump NC aa      100111XX    AAAAAAAA
+
 
 ‘X’ stands for ‘Don’t care’, ‘K’ stands for any data constant, ‘P’ stands for a memory address
 where data is stored, and ‘A’ stands for the next address the program counter should ‘jump’ to (if the
