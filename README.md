@@ -8,7 +8,7 @@ Design can be simulated on https://www.edaplayground.com/x/tvqx.
 
 The instruction set for the machine is:              
 
-
+![Instruction Set](instruction set.png)
 
 ‘X’ stands for ‘Don’t care’, ‘K’ stands for any data constant, ‘P’ stands for a memory address
 where data is stored, and ‘A’ stands for the next address the program counter should ‘jump’ to (if the
