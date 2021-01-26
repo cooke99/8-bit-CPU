@@ -7,7 +7,6 @@ operation for that instruction, and increment to the address of the next instruc
 Design can be simulated on https://www.edaplayground.com/x/tvqx.
 
 The instruction set for the machine is:              
-               
 
 
 
