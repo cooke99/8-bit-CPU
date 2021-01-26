@@ -1,2 +1,30 @@
 # 8-bit-CPU
-Verilog code for 8 bit CPU architecture design and testbench.
+Repo contains the Verilog design code as well as the code for a full system testbench (tests entire instruction set).
+The 8-bit CPU utilises a Von Neumann architecture, with the memory external to the CPU and housing
+both the instructions and data. The CPU operates in a Fetch, Decode, Execute and Increment cycle –
+i.e., Fetch the next instruction from memory, decode or parse the instruction, execute the desired
+operation for that instruction, and increment to the address of the next instruction.
+Design can be simulated on https://www.edaplayground.com/x/tvqx.
+
+The instruction set for the machine is:
+
+Instruction    Instruction  Instruction
+               Machine Code Address/Data
+               
+Load ACC kk     0000XXXX    KKKKKKKK
+Add ACC kk      0100XXXX    KKKKKKKK
+And ACC kk      0001XXXX    KKKKKKKK
+Sub ACC kk      0110XXXX    KKKKKKKK
+Input ACC pp    1010XXXX    PPPPPPPP
+Output ACC pp   1110XXXX    PPPPPPPP
+Jump U aa       1000XXXX    AAAAAAAA
+Jump Z aa       100100XX    AAAAAAAA
+Jump C aa       100110XX    AAAAAAAA
+Jump NZ aa      100101XX    AAAAAAAA
+Jump NC aa      100111XX    AAAAAAAA
+
+‘X’ stands for ‘Don’t care’, ‘K’ stands for any data constant, ‘P’ stands for a memory address
+where data is stored, and ‘A’ stands for the next address the program counter should ‘jump’ to (if the
+condition is met).
+
+A demonstration of a set of instructions is shown in CPU_Testbench.v.
